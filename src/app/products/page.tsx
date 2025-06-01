@@ -1,3 +1,4 @@
+// Atividade 01 
 
 const products = [
   { name: "Camisa", price: 49.90 },
