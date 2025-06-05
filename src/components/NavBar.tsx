@@ -1,32 +1,38 @@
 import Image from "next/image";
+interface NavBarProps{// quando uso interface é uma obrigaçao passar os valores na rederizaçao
+    links : {
+        label: string;
+        href: string;
+    }[]
+}
 
-export default function NavBar() {
+export default function NavBar({links}:NavBarProps) {
 
     return (
-        <nav className="bg-amber-50 shadow-sm">
-            <div className="px-4">
+        <nav className="bg-blue-200 shadow-sm">
+            <div className="px-4 mx-4">
                 <div className="flex justify-between h-16 items-center">
 
                     <div className="flex items-center">
                         <Image
-                            src="/nextjs-icon.svg"
+                            src="/next.svg"
                             alt="logo nextjs"
-                            width={40}
-                            height={40}
+                            width={90}
+                            height={90}
                         />
-                        <span className="ml-2">NextApp</span>
+                        {/* <span className="ml-2 font-black">NextApp</span> */}
                     </div>
 
                     <div className="flex space-x-6">
-                        <a href="" className="text-lg font-medium hover:text-indigo-600">
-                            Inicio
-                        </a>
-                        <a href="" className="text-lg font-medium  hover:text-indigo-600">
-                            Recursos
-                        </a>
-                        <a href="" className="text-lg font-medium  hover:text-indigo-600">
-                            Contato
-                        </a>
+                        {
+                            links.map((link,indice)=>(
+                                <a 
+                                key={indice} 
+                                href={link.href} 
+                                className="hover:text-blue-800 text-lg font-bold">
+                                    {link.label}</a>
+                            ))
+                        }
 
                     </div>
 
