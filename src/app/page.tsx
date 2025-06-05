@@ -4,11 +4,13 @@ import CardRecursos from "@/components/CardRecursos";
 export default function Home() {
   return (
     <div className="bg-white">
+
       <NavBar links={
         [
           {label:"Inicio", href:"/"},
           {label:"Sobre", href:"/about"},
           {label:"Produtos", href:"/products"}
+
         ]}/>
 
         <section className="bg-white py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +34,7 @@ export default function Home() {
                   iconeSRC="🔒" />
             </div>
       </section>
-
+  
     </div>
   );
 }

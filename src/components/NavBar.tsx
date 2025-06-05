@@ -29,7 +29,9 @@ export default function NavBar({links}:NavBarProps) {
                                 <a 
                                 key={indice} 
                                 href={link.href} 
+
                                 className="hover:text-blue-800 text-lg font-bold">
+                               
                                     {link.label}</a>
                             ))
                         }
