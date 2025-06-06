@@ -34,7 +34,6 @@ export default function Home() {
                   iconeSRC="🔒" />
             </div>
       </section>
-  
     </div>
   );
 }
