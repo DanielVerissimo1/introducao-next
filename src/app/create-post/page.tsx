@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
+import { Button } from "@/components/ui/button"
 
 type FormData = {
     title: string;
@@ -81,12 +82,9 @@ export default function CreatePostPage() {
                             value={formData.body}
                         />
                     </div>
-
-                    <button
-                        className="bg-blue-600 text-white py-2 px-3
-                    hover:bg-blue-700 rounded  cursor-pointer">
-                        Publicar
-                    </button>
+                    <div><Button type="submit" className="bg-blue-600 text-white py-2 px-3
+                    hover:bg-blue-700 rounded  cursor-pointer">Publicar</Button></div>
+                    
 
                 </form>
 
