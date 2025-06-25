@@ -1,11 +1,10 @@
 'use client';
 
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvent } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 type PointsType = 'restaurant' | 'bar' | 'hotel';
-
 // Mapeamento dos ícones por tipo
 const iconMap: Record<PointsType, L.Icon> = {
   restaurant: new L.Icon({
@@ -63,7 +62,21 @@ const points: Point[] = [
     type: 'hotel',
   },
 ];
+function ShowLatLonOnClick(){
+  const map = useMap()
 
+  useMapEvent('click',(event)=>{
+    const lat = event.latlng.lat 
+    const long = event.latlng.lng 
+    L.popup().setLatLng([lat,long]).setContent(
+      `Voce clicou em lat: ${lat.toFixed(2)} e long: ${long.toFixed(2)}`
+    )
+    .openOn(map)
+  })  
+
+
+  return null
+}
 export default function Map() {
   return (
     <MapContainer
@@ -96,6 +109,7 @@ export default function Map() {
           </Popup>
         </Marker>
       ))}
+      <ShowLatLonOnClick/>
     </MapContainer>
   );
 }
