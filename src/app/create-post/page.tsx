@@ -17,6 +17,7 @@ type ResponseData = {
 
 
 
+
 export default function CreatePostPage() {
 
     const [formData, setFormaData] = useState<FormData>(
