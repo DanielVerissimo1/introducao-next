@@ -7,9 +7,10 @@ interface CardProps {
     title: string;
     description: string;
     imageUrl: string;
+    category: string;
 }
 
-export function ThreeDCardDemo({ title, description,  imageUrl}: CardProps) {
+export function ThreeDCardDemo({ title, description,  imageUrl, category}: CardProps) {
   
   return (
     <CardContainer className="inter-var">
@@ -17,8 +18,14 @@ export function ThreeDCardDemo({ title, description,  imageUrl}: CardProps) {
         className="bg-gray-950 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-white w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-neutral-300 dark:text-white">
+          className="text-xl font-bold text-neutral-200 dark:text-white">
           {title}
+        </CardItem>
+        <CardItem
+          as="p"
+          translateZ="60"
+          className="text-neutral-300 text-md font-bold max-w-sm mt-1 dark:text-neutral-300">
+          {category}
         </CardItem>
         <CardItem
           as="p"
