@@ -48,13 +48,13 @@ export default function About(){
         ]
 
     return(
-        <div>
+        <div className="bg-gray-100">
             <h1 className="text-2x1 ">Sobre nós</h1>
             <p>Informações sobre a empresa </p>
             <Button label="clique-me"/>
 
             <div className="flex-col items-center justify-center ">
-                <h1 className="text-center font-bold text-xl md:text-4xl text-gray-700 relative">Cards</h1>
+                <h1 className="text-center font-bold text-xl md:text-4xl text-gray-700 py-8 relative">Cards</h1>
                 <div className="flex gap-5 items-center justify-center">
                     <ThreeDCardDemo
                     title="Clube da Luta"
@@ -77,7 +77,7 @@ export default function About(){
                    
                 </div>
             <div>
-                <h1 className="text-center  font-bold text-xl md:text-4xl text-gray-700 relative">Cards Renderizados Com Map</h1>
+                <h1 className="text-center  font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Cards Renderizados Com Map</h1>
                 <div className="flex gap-5 items-center justify-center ">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center gap-6">
                     {dadosFicticios.map((item, index) => (
@@ -92,8 +92,6 @@ export default function About(){
                     </div>
                 </div>
             </div>
-
-
             </div>
 
         </div>
