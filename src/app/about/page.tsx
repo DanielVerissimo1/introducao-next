@@ -1,4 +1,5 @@
 import Button from "@/components/Button"
+import Counter from "@/components/Counter"
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo"
 export default function About(){
     const dadosFicticios = [
@@ -93,6 +94,7 @@ export default function About(){
                 </div>
             </div>
             </div>
+            <Counter initialCount={0} />
 
         </div>
     )
