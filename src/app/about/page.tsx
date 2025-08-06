@@ -1,5 +1,6 @@
 'use client'
 import Button from "@/components/Button"
+import Counter from "@/components/Counter"
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo"
 import CommentForm from '@/components/CommentForm';
 import CommentList from '@/components/CommentList';
@@ -123,7 +124,7 @@ export default function About(){
                 <CommentForm onAddComment={handleAddComment} />
                 <CommentList comments={comments} />
             </div>
-
+            <Counter initialCount={0} />
         </div>
     )
 }
