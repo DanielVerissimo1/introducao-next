@@ -1,5 +1,6 @@
 import Button from "@/components/Button"
 import Counter from "@/components/Counter"
+import CounterLike from "@/components/CounterLike"
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo"
 export default function About(){
     const dadosFicticios = [
@@ -94,7 +95,19 @@ export default function About(){
                 </div>
             </div>
             </div>
-            <Counter initialCount={0} />
+            <div>
+                <h1 className="text-center font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Contadores</h1>
+                <p className="text-center text-gray-600 mb-4">Contadores com estado inicial</p> 
+                <Counter initialCount={0} />
+            </div>
+            <div >
+                <h1 className="text-center font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Contadores de Likes</h1>
+                <div className="py-20">
+                    <CounterLike initialCount={20} />
+                </div>
+                
+            </div>
+             
 
         </div>
     )
