@@ -1,6 +1,7 @@
 'use client'
 import Button from "@/components/Button"
 import Counter from "@/components/Counter"
+import CounterLike from "@/components/CounterLike"
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo"
 import CommentForm from '@/components/CommentForm';
 import CommentList from '@/components/CommentList';
@@ -119,12 +120,18 @@ export default function About(){
                 </div>
             </div>
             </div>
-            <div className="max-w-2xl mx-auto p-4">
-                <h1 className="text-2xl font-bold mb-4">Comentários</h1>
-                <CommentForm onAddComment={handleAddComment} />
-                <CommentList comments={comments} />
+            <div>
+                <h1 className="text-center font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Contadores</h1>
+                <p className="text-center text-gray-600 mb-4">Contadores com estado inicial</p> 
+                <Counter initialCount={0} />
             </div>
-            <Counter initialCount={0} />
+            <div >
+                <h1 className="text-center font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Contadores de Likes</h1>
+                <div className="py-20">
+                    <CounterLike initialCount={20} />
+                </div>
+                
+            </div>
         </div>
     )
 }
