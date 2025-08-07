@@ -1,7 +1,19 @@
+'use client'
 import Button from "@/components/Button"
 import Counter from "@/components/Counter"
 import CounterLike from "@/components/CounterLike"
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo"
+import CommentForm from '@/components/CommentForm';
+import CommentList from '@/components/CommentList';
+import { useState } from "react"
+
+interface CommentData {
+  id: string;
+  author: string;
+  text: string;
+  date: string;
+}
+
 export default function About(){
     const dadosFicticios = [
           {
@@ -49,6 +61,19 @@ export default function About(){
              
         ]
 
+    const [comments, setComments] = useState<CommentData[]>([]);
+
+    const handleAddComment = (author: string, text: string) => {
+        const newComment: CommentData = {
+        id: Date.now().toString(),
+        author,
+        text,
+        date: new Date().toLocaleString('pt-BR'),
+        };
+
+    setComments([newComment, ...comments]);
+  };
+    
     return(
         <div className="bg-gray-100">
             <h1 className="text-2x1 ">Sobre nós</h1>
@@ -107,8 +132,6 @@ export default function About(){
                 </div>
                 
             </div>
-             
-
         </div>
     )
 }
