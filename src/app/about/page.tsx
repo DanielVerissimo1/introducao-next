@@ -1,4 +1,5 @@
 'use client'
+import Lampada from "@/components/Lampada"
 import Button from "@/components/Button"
 import Counter from "@/components/Counter"
 import CounterLike from "@/components/CounterLike"
@@ -136,6 +137,9 @@ export default function About(){
             <div>
                 <h1 className="text-center font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Contador de Efeitos</h1>
                 <EffectCounter />
+            </div>
+            <div>
+                <Lampada/>
             </div>
         </div>
     )
