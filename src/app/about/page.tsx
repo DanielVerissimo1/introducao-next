@@ -6,6 +6,7 @@ import { ThreeDCardDemo } from "@/components/ThreeDCardDemo"
 import CommentForm from '@/components/CommentForm';
 import CommentList from '@/components/CommentList';
 import { useState } from "react"
+import EffectCounter from "@/components/EffectCounter";
 
 interface CommentData {
   id: string;
@@ -130,7 +131,11 @@ export default function About(){
                 <div className="py-20">
                     <CounterLike initialCount={20} />
                 </div>
-                
+            
+            </div>
+            <div>
+                <h1 className="text-center font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Contador de Efeitos</h1>
+                <EffectCounter />
             </div>
         </div>
     )
