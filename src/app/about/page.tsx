@@ -1,13 +1,9 @@
 'use client'
 import Lampada from "@/components/Lampada"
-import Button from "@/components/Button"
-import Counter from "@/components/Counter"
 import CounterLike from "@/components/CounterLike"
-import { ThreeDCardDemo } from "@/components/ThreeDCardDemo"
-import CommentForm from '@/components/CommentForm';
-import CommentList from '@/components/CommentList';
+import { ThreeDCardDemo } from "@/components/ThreeDCardDemo" 
 import { useState } from "react"
-import EffectCounter from "@/components/EffectCounter";
+import MiniDisplay from "@/components/MiniDisplay"
 
 interface CommentData {
   id: string;
@@ -78,10 +74,6 @@ export default function About(){
     
     return(
         <div className="bg-gray-100">
-            <h1 className="text-2x1 ">Sobre nós</h1>
-            <p>Informações sobre a empresa </p>
-            <Button label="clique-me"/>
-
             <div className="flex-col items-center justify-center ">
                 <h1 className="text-center font-bold text-xl md:text-4xl text-gray-700 py-8 relative">Cards</h1>
                 <div className="flex gap-5 items-center justify-center">
@@ -122,11 +114,6 @@ export default function About(){
                 </div>
             </div>
             </div>
-            <div>
-                <h1 className="text-center font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Contadores</h1>
-                <p className="text-center text-gray-600 mb-4">Contadores com estado inicial</p> 
-                <Counter initialCount={0} />
-            </div>
             <div >
                 <h1 className="text-center font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Contadores de Likes</h1>
                 <div className="py-20">
@@ -135,11 +122,10 @@ export default function About(){
             
             </div>
             <div>
-                <h1 className="text-center font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Contador de Efeitos</h1>
-                <EffectCounter />
+                <Lampada/>
             </div>
             <div>
-                <Lampada/>
+                <MiniDisplay/>
             </div>
         </div>
     )
