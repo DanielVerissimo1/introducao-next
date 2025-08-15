@@ -10,5 +10,21 @@ export default function Button({ label }: ButtonProps) {  // eu obrigo que o com
         </button>
     );
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }
 
