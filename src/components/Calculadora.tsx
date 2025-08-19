@@ -33,18 +33,20 @@ export default function Calculator() {
             let result
             if (display.includes("+")) {
                 result = display.split("+").reduce(
-                    (acc, val) => acc + Number(val), 0)
+                    (acumulador, valor) => acumulador + Number(valor), 0)
             } else if (display.includes("-")) {
                 const values = display.split("-").map(Number)
-                result = values.reduce((acc, val, index) => index === 0 ? val : acc - val)
+                result = values.reduce((acumulador, valor, index) => index === 0 ? valor : acumulador - valor)
             } else if (display.includes("*")) {
-                result = display.split("*").reduce((acc, val) => acc * Number(val), 1)
+                
+                result = display.split("*").reduce((acumulador, valor) => acumulador * Number(valor), 1)
             } else if (display.includes("/")) {
                 const values = display.split("/").map(Number)
-                result = values.reduce((acc, val, index) => {
-                    if (index === 0) return val
-                    if (val === 0) throw new Error("Divisão por zero")
-                    return acc / val
+
+                result = values.reduce((acumulador, valor, index) => {
+                    if (index === 0) return valor
+                    if (valor === 0) throw new Error("Divisão por zero")
+                    return acumulador / valor
                 })
             } else {
                 return
@@ -147,7 +149,7 @@ export default function Calculator() {
                     <button 
                         onClick={() => addOperator("-")}
                         className={btnOperator}
-                    >
+                    >   
                         -
                     </button>
 

@@ -20,7 +20,7 @@ export default function NavBar({links}:NavBarProps) {
                             width={90}
                             height={90}
                         />
-                        {/* <span className="ml-2 font-black">NextApp</span> */}
+                       
                     </div>
 
                     <div className="flex space-x-6">
