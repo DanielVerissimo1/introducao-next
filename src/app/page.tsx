@@ -1,9 +1,5 @@
 import { Card } from "@/components/Card";
 import NavBar from "@/components/NavBar";
-import Map from "@/components/Map";
-import PlaceForm from "@/components/PlaceForm";
-
-
 
 
 export default function Home() {
@@ -42,9 +38,6 @@ export default function Home() {
         </div>
 
       </section>
-      <div>
-        <Map/>
-      </div>
 
     </div>
   );

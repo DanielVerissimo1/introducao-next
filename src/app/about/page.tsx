@@ -3,6 +3,7 @@ import Lampada from "@/components/Lampada"
 import CounterLike from "@/components/CounterLike"
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo" 
 import { useState } from "react"
+import MiniDisplay from "@/components/miniDisplay"
 import NavBar from "@/components/NavBar";
 
 interface CommentData {
@@ -130,6 +131,9 @@ export default function About(){
             </div>
             <div>
                 <Lampada/>
+            </div>
+            <div>
+                <MiniDisplay/>
             </div>
             
         </div>

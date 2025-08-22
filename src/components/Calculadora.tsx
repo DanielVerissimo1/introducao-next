@@ -25,7 +25,8 @@ export default function Calculator() {
             if (display === "") return
             
             const lastChar = display.slice(-1)
-            if (["+", "-", "*", "/"].includes(lastChar)) {
+            const operators = ["+", "-", "*", "/"]
+            if (operators.includes(lastChar)) {
                 alert("Expressão inválida")
                 return
             }
