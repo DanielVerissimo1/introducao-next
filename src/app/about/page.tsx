@@ -5,6 +5,7 @@ import { ThreeDCardDemo } from "@/components/ThreeDCardDemo"
 import { useState } from "react"
 import MiniDisplay from "@/components/miniDisplay"
 import NavBar from "@/components/NavBar";
+import BotaoReproducao from "@/components/BotaoReproducao"
 
 interface CommentData {
   id: string;
@@ -134,6 +135,9 @@ export default function About(){
             </div>
             <div>
                 <MiniDisplay/>
+            </div>
+            <div>
+                <BotaoReproducao/>
             </div>
             
         </div>
