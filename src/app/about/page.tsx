@@ -6,6 +6,7 @@ import { useState } from "react"
 import MiniDisplay from "@/components/miniDisplay"
 import NavBar from "@/components/NavBar";
 import BotaoReproducao from "@/components/BotaoReproducao"
+import ListaDeCompras from "@/components/ListaDeCompras"
 
 interface CommentData {
   id: string;
@@ -133,11 +134,14 @@ export default function About(){
             <div>
                 <Lampada/>
             </div>
-            <div>
-                <MiniDisplay/>
-            </div>
-            <div>
+            <div className="flex flex-col items-center justify-center py-10 gap-4">
+               <h1 className="text-center font-bold text-xl md:text-4xl py-4 text-gray-700 relative">Botão de Reproducão</h1>
                 <BotaoReproducao/>
+            </div>
+            <div className="flex flex-col items-center justify-center py-10 gap-4">
+               
+                <ListaDeCompras/>
+
             </div>
             
         </div>
