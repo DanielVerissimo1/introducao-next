@@ -7,6 +7,7 @@ import MiniDisplay from "@/components/miniDisplay"
 import NavBar from "@/components/NavBar";
 import BotaoReproducao from "@/components/BotaoReproducao"
 import ListaDeCompras from "@/components/ListaDeCompras"
+import FeedPage from "@/components/FeedPage"
 
 interface CommentData {
   id: string;
@@ -79,7 +80,7 @@ export default function About(){
         <div className="bg-gray-100">
              <NavBar links={
                     [
-                      { label: 'home', href: '' },
+                      { label: 'home', href: '/' },
                       { label: 'Sobre Nós', href: '/about' },
                       { label: 'Produtos', href: '/product' }
                     ]
@@ -139,11 +140,11 @@ export default function About(){
                 <BotaoReproducao/>
             </div>
             <div className="flex flex-col items-center justify-center py-10 gap-4">
-               
                 <ListaDeCompras/>
-
             </div>
-            
+            <div>
+                <FeedPage/>
+            </div>
         </div>
     )
 }
